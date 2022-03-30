@@ -1,0 +1,42 @@
+name: c10-dirichlet-csgld-label-noise
+method: grid
+parameters:
+  label_noise:
+    values:
+      - 0
+      # - .1
+      # - .2
+      # - .5
+      # - .8
+  noise:
+    values:
+      - 1e-4
+      # - 1e-3
+      # - 1e-2
+      # - 1e-1
+  # seed:
+  #   values:
+  #     - -1
+  #     - -2
+  #     - -3
+  sgld_lr:
+    values:
+      - 1e-7
+      - 2e-7
+      - 5e-7
+      - 1e-6
+  n_cycles:
+    values:
+      - 5
+      - 10
+      - 30
+program: experiments/train_lik.py
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - ${args}
+  - --dataset=cifar10
+  - --likelihood=dirichlet
+  - --sgld-epochs=500
+  - --n-samples=30

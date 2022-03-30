@@ -1,0 +1,45 @@
+name: c10-aug-dirichlet-csgld-label-noise
+method: grid
+parameters:
+  label_noise:
+    values:
+      - 0
+      # - .1
+      # - .2
+      # - .5
+      # - .8
+  noise:
+    values:
+      - 1e-6
+      # - 1e-4
+      # - 1e-2
+      # - 1e-1
+  aug_scale:
+    values:
+      - 1
+      - 5
+      - 10
+      - 30
+  # seed:
+  #   values:
+  #     - -1
+  #     - -2
+  #     - -3
+  sgld_lr:
+    values:
+      - 5e-8
+      - 1e-7
+      - 2e-7
+      - 5e-7
+      - 1e-6
+program: experiments/train_aug_lik.py
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - ${args}
+  - --dataset=cifar10
+  - --likelihood=dirichlet
+  - --sgld-epochs=400
+  - --n-cycles=20
+  - --n-samples=20

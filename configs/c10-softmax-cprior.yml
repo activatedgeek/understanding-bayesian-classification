@@ -1,0 +1,42 @@
+name: c10-softmax-cprior
+method: grid
+parameters:
+  label_noise:
+    values:
+      - 0
+      # - .1
+      # - .2
+      # - .5
+      # - .8
+  temperature:
+    values:
+      - 1
+      - 1e-1
+      - 1e-2
+      - 1e-3
+      - 1e-4
+      - 1e-5
+      # - 3
+      # - 10
+  cprior_coeff:
+    values:
+      - 1
+      - 1e-1
+      - 1e-2
+      - 1e-3
+  # seed:
+  #   values:
+  #     - -1
+  #     - -2
+  #     - -3
+program: experiments/train_cprior.py
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - ${args}
+  - --dataset=cifar10
+  - --sgld-epochs=1000
+  - --sgld-lr=1e-6
+  - --n-cycles=50
+  - --n-samples=50
