@@ -1,8 +1,8 @@
 # Understanding Bayesian Classification
 
-[![](https://img.shields.io/badge/arXiv-2204.xxxxx-red)](#)
+[![](https://img.shields.io/badge/arXiv-2203.16481-red)](https://arxiv.org/abs/2203.16481)
 
-This repository hosts the code to reproduce the results presented in the paper [On Uncertainty, Tempering, and Data Augmentation in Bayesian Classification](#) by [Sanyam Kapoor](https://sanyamkapoor.com), [Wesley J Maddox](https://wjmaddox.github.io), [Pavel Izmailov](https://izmailovpavel.github.io), and [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/).
+This repository hosts the code to reproduce the results presented in the paper [On Uncertainty, Tempering, and Data Augmentation in Bayesian Classification](https://arxiv.org/abs/2203.16481) by [Sanyam Kapoor](https://sanyamkapoor.com), [Wesley J Maddox](https://wjmaddox.github.io), [Pavel Izmailov](https://izmailovpavel.github.io), and [Andrew Gordon Wilson](https://cims.nyu.edu/~andrewgw/).
 
 ## Key Ideas
 
